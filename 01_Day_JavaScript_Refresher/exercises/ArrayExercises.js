@@ -1,3 +1,5 @@
+import countries from "./countries.js";
+import webTechs from "./webTechs.js";
 // **************************************************** Level 1****************************************************************************
 //1. Declare an empty array;
 const emptyArray = [];
@@ -131,9 +133,55 @@ console.log(shoppingCart);
 //- Find the range of the ages(max minus min)
 //- Compare the value of (min - average) and (max - average), use abs() method
 const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+
 ages.sort();
 console.log(ages);
+
 let min = ages[0];
 let max = ages[ages.length - 1];
 console.log("min:", min);
 console.log("max", max);
+
+middle = ages.length % 2;
+middle2 = ages.length / 2;
+if (middle === 0) {
+  console.log(ages[middle2 - 1], ages[middle2]);
+} else {
+  console.log(ages[middle2 - 0.5]);
+}
+
+let sum = 0;
+for (let i = 0; i < ages.length; i++) {
+  sum += ages[i];
+}
+let averageNum = sum / ages.length;
+console.log(averageNum);
+
+let range = max - min;
+console.log(range);
+
+let rangeMin = Math.abs(min - averageNum);
+let rangeMax = Math.abs(max - averageNum);
+if (rangeMin > rangeMax) console.log("(min-average) > (max-average)");
+else console.log("(min-average) < (max-average)");
+
+//2 Slice the first ten countries from the countries array
+console.log(countries.slice(0, 10));
+
+//3 Find the middle country(ies) in the countries array
+middle = countries.length % 2;
+middle2 = countries.length / 2;
+if (middle === 0) {
+  console.log(countries[middle2 - 1], countries[middle2]);
+} else {
+  console.log(countries[middle2 - 0.5]);
+}
+
+//4 Divide the countries array into two equal arrays if it is even. If countries array is not even , one more country for the first half.
+if (middle === 0) {
+  console.log(countries.slice(0, middle2 - 1));
+  console.log(countries.slice(middle2));
+} else {
+  console.log(countries.slice(0, middle2 - 0.5));
+  console.log(countries.slice(middle2 + 0.5));
+}
