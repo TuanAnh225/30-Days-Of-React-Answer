@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test JSX</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div class="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const rootElement = document.querySelector(".root");
+      const headerStyle = {
+        backgroundColor: "lightgray",
+        padding: "10px",
+        textAlign: "center",
+      };
+
+      const contentStyle = {
+        backgroundColor: "lightblue",
+        padding: "20px",
+      };
+      const user = (
+        <div style={contentStyle}>
+          <h1 style={headerStyle}>Tuan Anh</h1>
+          <p>Viet Nam</p>
+          <p>DEV NGU</p>
+          <p>Nam-</p>
+          <p>anhpt@example.com</p>
+          <p>0334988582</p>
+        </div>
+      );
+      const name = "Tuan Anh";
+      const age = 30;
+      const address = {
+        city: "Hà Nội",
+        country: "Việt Nam",
+      };
+
+      const userDetail = (
+        <div>
+          <p>{name}, chào mừng bạn!</p>
+          <p>Tuổi của bạn: {age}</p>
+          <p>
+            Địa chỉ: {address.city}, {address.country}
+          </p>
+        </div>
+      );
+      //   ReactDOM.render(user, rootElement);
+      ReactDOM.render(userDetail, rootElement);
+    </script>
+  </body>
+</html>
