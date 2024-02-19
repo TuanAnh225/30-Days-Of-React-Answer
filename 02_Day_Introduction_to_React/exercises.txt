@@ -114,3 +114,17 @@
     );
     Exercise: Inject data to JSX
 Practice how to make JSX element and injecting dynamic data(string, number, boolean, array, object)
+    const name = "Tuan Anh";
+    const age = 30;
+    const address = {
+    city: 'Hà Nội',
+    country: 'Việt Nam'
+    };
+
+    const user = (
+    <div>
+        <p>{name}, chào mừng bạn!</p>
+        <p>Tuổi của bạn: {age}</p>
+        <p>Địa chỉ: {address.city}, {address.country}</p>
+    </div>
+    );
