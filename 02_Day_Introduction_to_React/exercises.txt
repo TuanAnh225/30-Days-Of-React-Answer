@@ -1,0 +1,116 @@
+    Exercises: What is React?
+1. What is React?
+    - Là thư viện JS
+    - Tạo giao diện người dùng
+    - Do fb tạo 
+    - Phù hợp với web nhiều tương tác
+    - Tạo ra component có thể tái sử dụng
+2. What is a library?
+    - Thư viện là code, hàm có viết sẵn để người pt không cần code từ đầu, mà có thể sử dụng để thực hiện chức năng cụ thể
+3. What is a single page application?
+    - SPA là loại web mà cập nhật lại web một cách động thay vì tải lại toàn bộ trang
+4. What is a component ?
+    - Khối code có thể tái sử dụng
+5. What is the latest version of React?
+    - React 18
+6. What is DOM?
+    - Là chuẩn dùng để truy xuất và thao tác các tài liệu có dạng HTML hoặc XML bằng các ngôn ngữ như JS, PHP
+7. What is React Virtual DOM?
+    - Là bản sao nhẹ của DOM, khi thay đổi, tương tác thì sẽ cập nhật vào VDOM xong mới so sánh với DOM để update những cái thật sự cần
+    - Giúp tối ưu hóa khi làm việc với DOM
+8. What does a web application or a website(composed of) have?
+    - Giao diện người dùng
+    - Backend
+    - DB
+    - API
+    Exercises: Why React?
+1. Why did you chose to use react?
+    - Cộng đồng lớn, cập nhật thường xuyên.
+    - Phù hợp ứng dụng phức tạp
+2. What measures do you use to know popularity ?
+    - Số người sử dụng
+    - Số lượng sản phẩm
+    - Số lượng công việc
+    - Số lượng trao đổi, chia sẻ
+3. What is more popular, React or Vue ?
+    - React
+    Exercises: JSX
+1. What is an HTML element?
+    - Khối cơ bản của trang web
+    - Như văn bản, hình ảnh, liên kết...
+2. How to write a self closing HTML element?
+    - Không có thẻ đóng ví dụ <img />
+3. What is an HTML attribute? Write some of them
+    - Thuộc tính ở thẻ mở, bổ sung thông tin cho phần tử HTML
+4. What is JSX?
+    - Phần mở rộng cú pháp cho JavaScript
+    - Viết HTML trong JS, biên dịch thành JS bằng babel
+5. What is babel?
+    - Trình biên dịch JS
+6. What is a transpiler?
+    - Trình biên dịch chuyển đổi mã nguồn viết bằng một ngôn ngữ lập trình thành một ngôn ngữ lập trình khác mà giữ nguyên chức năng
+    Exercises: JSX Elements
+1. What is a JSX element?
+    - Đối tượng JS đại diện một phần giao diện người dùng, được viết bằng cú pháp JSX giống HTML 
+2. Write your name in a JSX element and store it in a name variable
+    - const name = <h1> TuanAnh </h1>;
+3. Write a JSX element which displays your full name, country, title, gender, email, phone number. Use h1 for the name and p for the rest of the information and store it in a user variable
+    const user = (
+  <div>
+    <h1>Tuan Anh</h1>
+    <p>Viet Nam</p>
+    <p>DEV NGU</p>
+    <p>Nam-</p>
+    <p>anhpt@example.com</p>
+    <p>0334988582</p>
+  </div>
+);
+4. Write a footer JSX element
+    const footer = <footer>HIHI</footer>;
+1. Create a style object for the main JSX
+    const mainStyle = {
+    backgroundColor: 'lightblue',
+    };
+2. Create a style object for the footer and app JSX
+    const footerStyle = {
+    backgroundColor: 'darkblue',
+    color: 'white',
+    };
+
+    const appStyle = {
+    fontFamily: 'Arial, sans-serif',
+    };
+3. Add more styles to the JSX elements
+    const user = (
+  <div style={{ border: '1px solid black', borderRadius: '5px', padding: '10px' }}>
+    <h1>Tuan Anh</h1>
+    <p>Viet Nam</p>
+    <p>DEV NGU</p>
+    <p>Nam-</p>
+    <p>anhpt@example.com</p>
+    <p>0334988582</p>
+  </div>
+);
+1. Apply different styles to your JSX elements
+    const headerStyle = {
+    backgroundColor: 'lightgray',
+    padding: '10px',
+    textAlign: 'center',
+    };
+
+    const contentStyle = {
+    backgroundColor: 'lightblue',
+    padding: '20px',
+    };
+      const user = (
+    <div style={contentStyle}>
+        <h1 style={headerStyle} >Tuan Anh</h1>
+        <p>Viet Nam</p>
+        <p>DEV NGU</p>
+        <p>Nam-</p>
+        <p>anhpt@example.com</p>
+        <p>0334988582</p>
+    </div>
+    );
+    Exercise: Inject data to JSX
+Practice how to make JSX element and injecting dynamic data(string, number, boolean, array, object)
